@@ -20,7 +20,7 @@ const Navbar = () => {
   const btnRef = React.useRef()
   return (
     <Flex w='100%' h='100%'>
-      <Flex py='5px' px={{xl:'5%', lg:'5%', md:'5%', sm:'5%', base:'2%'}} w='100%' justifyContent='space-between'>
+      <Flex py='5px' px={{xl:'5%', lg:'5%', md:'5%', sm:'5%', base:'3%'}} w='100%' justifyContent='space-between'>
         <Flex color='#fff' className='navbar_header'  fontSize='25px' letterSpacing='2px' cursor='pointer'>Nikhil</Flex>
         <Flex>
           {/* <Flex cursor='pointer' mx='10px' fontSize='25px'>
