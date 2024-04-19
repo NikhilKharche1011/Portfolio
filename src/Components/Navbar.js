@@ -38,7 +38,7 @@ const Navbar = () => {
               finalFocusRef={btnRef}
             >
               <DrawerOverlay />
-              <DrawerContent h='100vh' bgColor='#1a1a1aeb' transition='0.6s ease-in-out'>
+              <DrawerContent h='100lvh' bgColor='#1a1a1aeb' transition='0.6s ease-in-out'>
                 <Flex py='5px' px={{xl:'5%', lg:'5%', md:'5%', sm:'5%', base:'3%'}} w='100%' justifyContent='space-between'>
                 <DrawerCloseButton color='#fff' m='0px' p='0px'  fontSize={{xl:'20px', lg:'20px', md:'20px', sm:'20px', base:'20px'}} />
                 <DrawerHeader color='#fff'  className='navbar_header' justifyContent='flex-start' p='0px' fontSize='25px' letterSpacing='2px'>NIKHIL</DrawerHeader>
