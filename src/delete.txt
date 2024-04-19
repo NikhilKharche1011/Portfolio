@@ -1,1 +1,129 @@
-sas
+
+import './App.css';
+  import toast, {Toaster} from 'react-hot-toast'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import { ChakraProvider, Flex, Text } from '@chakra-ui/react'
+import Newpassword from './pages/users/Newpassword';
+// import ManageManager from './pages/admin/ManageManager';
+// import Landingpage from './pages/Landingpage';
+const Landingpage = lazy(() => import('./pages/Landingpage'))
+const Userslogin = lazy(() => import('./pages/users/Userslogin'))
+const Adminlogin = lazy(() => import('./pages/admin/Adminlogin'))
+// import Userslogin from './pages/users/Userslogin';
+// import Adminlogin from './pages/admin/Adminlogin';
+// import Tables from './components/Tables';
+const Clientsidebar = lazy(() => import('./pages/users/Clientsidebar'))
+const Clientdashboard = lazy(() => import('./pages/users/Clientdashboard'))
+const Subuserdashboard = lazy(() => import('./pages/users/Subuserdashboard'))
+const Projectprocess = lazy(() => import('./pages/users/Projectprocess'))
+const Addsubuser = lazy(() => import('./pages/users/Addsubuser'))
+const Clientproject = lazy(() => import('./pages/users/Clientproject'))
+const RequestProject = lazy(() => import('./pages/users/RequestProject'))
+const Managerusers = lazy(() => import('./pages/users/Managerusers'))
+const Clientprofile = lazy(() => import('./pages/users/Clientprofile'))
+
+const Adminsidebar = lazy(() => import('./pages/admin/Adminsidebar'))
+const Admindashboard = lazy(() => import('./pages/admin/Admindashboard'))
+const Userprofile = lazy(() => import('./pages/users/Userprofile'))
+const Adminprofile = lazy(() => import('./pages/admin/Adminprofile'))
+const Tables = lazy(() => import('./components/Tables'))
+const Addmanager = lazy(()=> import('./pages/admin/Addmanager'))
+const Addexecutive = lazy(()=> import('./pages/admin/Addexecutive'))
+const AddEmployee = lazy(()=> import('./pages/admin/AddEmployee'))
+const Addclient = lazy(()=> import('./pages/admin/Addclient'))
+const Addproject = lazy(()=> import('./pages/admin/Addproject'))
+const Managerdashboard = lazy(()=> import('./pages/admin/Managerdashboard'))
+const ManageManager = lazy(()=> import('./pages/admin/ManageManager'))
+const ManageClient = lazy(()=> import('./pages/admin/ManageClient'))
+const ManageEditors = lazy(()=> import('./pages/admin/ManageEditors'))
+const ManageExecutives = lazy(()=> import('./pages/admin/ManageExecutives'))
+const Executivedashboard = lazy(()=> import('./pages/admin/Executivedashboard'))
+const Editordashboard = lazy(()=> import('./pages/admin/Editordashboard'))
+const Allprojects = lazy(()=> import('./pages/admin/Allprojects'));
+const AdminViewProject = lazy(()=> import('./pages/admin/AdminViewProject'));
+const Progressproject = lazy(()=> import('./pages/admin/Progressproject'));
+const Editorprojects = lazy(()=> import('./pages/admin/Editorprojects'));
+const EditorAssignedProjects = lazy(()=> import('./pages/admin/EditorAssignedProjects'));
+const Assignproject = lazy(()=> import('./pages/admin/Assignproject'));
+
+
+function App() {
+  // const [alert, setalert] = useState({message:"", type:""})
+  const showalert = (message, type)=>{
+    if(type==="success"){
+      toast.success(message)
+    }
+    else if(type==="error"){
+      toast.error(message)
+    }
+  }
+  return (
+    <ChakraProvider>
+      <Router>
+          <Suspense fallback={
+            <Flex w='100%' h='100vh' justifyContent='center' alignItems='center'>
+              <Text color='rgba(255,75,74,1)'>
+                Loading...
+              </Text>
+            </Flex>
+          }>
+        <Routes>
+            <Route exact path='/' element={<Landingpage />} />
+
+
+            {/* ********** components ******************** */}
+            <Route path='/components/tables' element={<Tables />} />
+
+
+            {/* *************** UserSide ***************** */}
+            <Route path='/users/Sidebar' element={<Clientsidebar showalert={showalert} />} />
+            <Route path='/users/Login' element={<Userslogin showalert={showalert} />} />
+            <Route path='/users/Dashboard' element={<Clientdashboard showalert={showalert} />} />
+            <Route path='/users/Subuserdashboard' element={<Subuserdashboard showalert={showalert} />} />
+            <Route path='/users/Userprofile' element={<Userprofile showalert={showalert} />} />
+            <Route path='/users/Projectprocess/:project_id' element={<Projectprocess showalert={showalert} />} />
+            <Route path='/users/Addsubuser' element={<Addsubuser showalert={showalert} />} />
+            <Route path='/users/Clientproject' element={<Clientproject showalert={showalert} />} />
+            <Route path='/users/RequestProject' element={<RequestProject showalert={showalert} />} />
+            <Route path='/users/Managerusers' element={<Managerusers showalert={showalert} />} />
+            <Route path='/users/Clientsidebar' element={<Clientsidebar showalert={showalert} />} />
+            <Route path='/users/Clientprofile' element={<Clientprofile showalert={showalert} />} />
+
+
+
+
+            {/* *************** AdminSide ***************** */}
+            <Route path='/admin/Login' element={<Adminlogin showalert={showalert} />} />
+            <Route path='/admin/Sidebar' element={<Adminsidebar showalert={showalert} />} />
+            <Route path='/admin/Admindashboard' element={<Admindashboard  showalert={showalert}/>} />
+            <Route path='/admin/Adminprofile' element={<Adminprofile showalert={showalert} />} />
+            <Route path='/admin/Addmanager' element={<Addmanager showalert={showalert} />}  />
+            <Route path='/admin/Addexecutive' element={<Addexecutive showalert={showalert} />} />
+            <Route path='/admin/AddEmployee' element={<AddEmployee showalert={showalert} />} />
+            <Route path='/admin/Addclient' element={<Addclient showalert={showalert} />} />
+            <Route path='/admin/Addproject' element={<Addproject showalert={showalert} />} />
+            <Route path='/admin/Managerdashboard' element={<Managerdashboard showalert={showalert} />} />
+            <Route path='/admin/ManageManager' element={<ManageManager showalert={showalert} />} />
+            <Route path='/admin/ManageClient' element={<ManageClient showalert={showalert} />} />
+            <Route path='/admin/ManageEditors' element={<ManageEditors showalert={showalert} />} />
+            <Route path='/admin/ManageExecutives' element={<ManageExecutives showalert={showalert} />} />
+            <Route path='/admin/Executivedashboard' element={<Executivedashboard showalert={showalert} />} />
+            <Route path='/admin/Editordashboard/' element={<Editordashboard showalert={showalert} />} />
+            <Route path='/admin/Editorprojects' element={<Editorprojects showalert={showalert} />} />
+            <Route path='/admin/EditorAssignedProjects/:project_id' element={<EditorAssignedProjects showalert={showalert} />} />
+            <Route path='/admin/Assignproject' element={<Assignproject showalert={showalert} />} />
+            <Route path='/admin/Allprojects' element={<Allprojects showalert={showalert} />} />
+            <Route path='/admin/AdminViewProject/:id' element={<AdminViewProject showalert={showalert} />} />
+            <Route path='/admin/Progressproject/:project_id' element={<Progressproject showalert={showalert} />} />
+            <Route path='/newpassword/:length/:url' element={<Newpassword showalert={showalert} />} />
+
+        </Routes>
+          </Suspense>
+      </Router>
+      <Toaster />
+    </ChakraProvider>
+  );
+}
+
+export default App;
