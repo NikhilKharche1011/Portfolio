@@ -19,7 +19,7 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
   return (
-    <Flex w='100%' h='100%'>
+    <Flex w='100%' h='auto'>
       <Flex py='5px' px={{xl:'5%', lg:'5%', md:'5%', sm:'5%', base:'3%'}} w='100%' justifyContent='space-between'>
         <Flex color='#fff' className='navbar_header'  fontSize='25px' letterSpacing='2px' cursor='pointer'>Nikhil</Flex>
         <Flex>
@@ -38,10 +38,12 @@ const Navbar = () => {
               finalFocusRef={btnRef}
             >
               <DrawerOverlay />
-              <DrawerContent h='100vh' bgColor='#1a1a1ad6' transition='0.6s ease-in-out'>
-                <DrawerCloseButton color='#fff' m='10px' fontSize='30px' />
-                <DrawerHeader color='#fff' className='navbar_header' pl='40px' fontSize='25px' letterSpacing='2px'>NIKHIL</DrawerHeader>
-                <DrawerBody>
+              <DrawerContent h='100vh' bgColor='#1a1a1aeb' transition='0.6s ease-in-out'>
+                <Flex py='5px' px={{xl:'5%', lg:'5%', md:'5%', sm:'5%', base:'3%'}} w='100%' justifyContent='space-between'>
+                <DrawerCloseButton color='#fff' m='0px' p='0px'  fontSize={{xl:'20px', lg:'20px', md:'20px', sm:'20px', base:'20px'}} />
+                <DrawerHeader color='#fff'  className='navbar_header' justifyContent='flex-start' p='0px' fontSize='25px' letterSpacing='2px'>NIKHIL</DrawerHeader>
+                </Flex>
+                <DrawerBody >
                   <Flex w='100%' flexDirection='column' h='100%' justifyContent='center' alignItems='flex-start' pl='15%'>
                     <Flex my='10px' letterSpacing='2px' color='#fff'  className='navbarfont' fontSize={{xl:'60px', lg:'60px', md:'60px', sm:'60px', base:'50px'}}>Home</Flex>
                     <Flex my='10px' letterSpacing='2px' color='#fff'  className='navbarfont' fontSize={{xl:'60px', lg:'60px', md:'60px', sm:'60px', base:'50px'}}>Projects</Flex>
