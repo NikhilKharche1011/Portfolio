@@ -33,7 +33,7 @@
 }
 .navbarfont:hover{
   color: #ff4545;
-  transition: 1s ease-in-out;
+  transition: 0.8s ease-in-out;
 }
 .navbarfont:nth-child(2){
   line-height: 1.1;
@@ -56,13 +56,13 @@
   width: 100%;
   height: 3px;
   background-color: #fff;
-  transform: scaleX(0);
+  transform: scaleX(0) scaleY(0);
   transform-origin: left;
-  transition: 0.7s ease-in-out;
+  transition: 0.7s ease-out;
 }
 
 .navbarfont:hover::after {
-  transform: scaleX(1);
+  transform: scaleX(1) scaleY(1);
   background-color: #ff4545;
   transform-origin: center;
 }
