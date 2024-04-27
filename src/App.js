@@ -1,16 +1,29 @@
 import React, { useEffect, useState, Suspense, lazy } from 'react';
-import { ChakraProvider, Flex, Text } from '@chakra-ui/react';
+import { ChakraProvider, Flex, Text, extendTheme } from '@chakra-ui/react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import { FaLinkedin } from 'react-icons/fa'
+import { BiLogoGmail } from "react-icons/bi";
+import { FaLinkedinIn  } from "react-icons/fa6";
 const Home = lazy(() => import('./Components/Home'))
 const Projects = lazy(() => import('./Components/Projects'))
 const About_me = lazy(() => import('./Components/About_me'))
 const Resume = lazy(() => import('./Components/Resume'))
 const Contact_me = lazy(() => import('./Components/Contact_me'))
 function App() {
+const customtheme = extendTheme({
+
+   breakpoints : {
+    base: '0em',
+    sm: '34em',
+    md: '48em',
+    lg: '62em',
+    xl: '80em',
+    '2xl': '96em',
+  }
+})
+
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={customtheme}>
       <Suspense fallback={
         <>
           <Flex h='100lvh' width='100%' bgColor='#1a1a1a' justifyContent='center' alignItems='center'>
@@ -29,13 +42,14 @@ function App() {
             <Route path='/Contact_me' element={<Contact_me />} />
           </Routes>
         </Router>
-        <Flex flexDirection='row' transform='rotate(270deg)' position='fixed' top='45%' left='-10px' display={{ xl: 'flex', lg: 'flex', md: 'flex', sm: 'none', base: 'none' }} >
-          <Text letterSpacing='1px' fontSize='18px' color='#fff'>FOLLOW ME - </Text>
-          <Flex color='#fff' alignItems='center' fontSize='17px' mx='5px' justifyContent='center' ><FaLinkedin /></Flex>
-
-        </Flex>
       </Suspense>
 
+      <Flex flexDirection='row' transform='rotate(270deg)' position='fixed' top='50%' left='-20px' display={{ xl: 'flex', lg: 'flex', md: 'flex', sm: 'none', base: 'none' }} >
+        <Text letterSpacing='1px' fontSize='18px' color='#ebebeb' transition='1s' _hover={{textDecoration:'underline #ff4545', textUnderlineOffset:'5px'}}>CONTACT ME - </Text>
+        <Flex bgColor='#ff4545' px='3px' color='#ebebeb' alignItems='center' fontSize='16px' mb='5px' justifyContent='center' mx='2px' ><FaLinkedinIn  /></Flex>
+        <Flex bgColor='#ff4545' px='3px' color='#ebebeb' alignItems='center' fontSize='16px' mb='5px' justifyContent='center' mx='2px' ><BiLogoGmail /></Flex>
+
+      </Flex>
 
     </ChakraProvider>
   );
