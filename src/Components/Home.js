@@ -1,21 +1,40 @@
 import React from 'react'
 import Navbar from './Navbar'
 import {
-    ChakraProvider,
-    ColorModeScript,
-    Box,
     Flex,
-    Heading,
-    FormControl,
-    FormLabel,
-    Input,
     Button,
-    Code,
     Text
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 const Home = () => {
+    const MotionText = motion(Text);
+    const MotionFlex = motion(Flex);
+    const MotionButton = motion(Button);
+
+    const pageVariants = {
+        exit: {
+            y: -300,
+            background: '#ff454596',
+            opacity: 0,
+            transition: { duration: 0.1 }, // Adjust duration as needed
+        },
+        enter: {
+            opacity: 1,
+           y: 0,
+            background: '#1a1a1a',
+            transition: { duration: 1 }, // Adjust duration as needed
+        },
+    };
     return (
-        <Flex
+        <MotionFlex
+            initial="exit"
+            animate="enter"
+            exit="exit"
+            variants={pageVariants}
+            // inherit={{ x: - 1000, opacity: 0 }}
+            // animate={{ x: 0, opacity: 1 }}
+            // exit={{ x: 1000, opacity: 0 }}
+            // transition={{ duration: 5 }}
             w='100%'
             h='100lvh'
             flexDirection='column'
@@ -33,29 +52,74 @@ const Home = () => {
             <Flex
                 // align="center"
                 justify="center"
-                height={{ '2xl': '100%', xl: '100%', lg: '100%', md: '100%', sm: '100%', base: 'auto' }}
+                height={{ '2xl': '100%', xl: '100%', lg: '100%', md: '100%', sm: '100%', base: '100lvh' }}
             // backgroundColor="green.800"
             >
-                <Flex flexDirection='column' justifyContent='center' alignItems='center' p={5} maxW={{ '2xl': '1100px', xl: '850px', lg: "850px", md: "850px", sm: "850px", base: "850px" }} >
-                    <Heading fontFamily='monospace' className='animation aniblock1' as="h1" fontSize={{ '2xl': '20px', xl: '15px' }} color="white">
+                <Flex flexDirection='column' justifyContent='center' alignItems='center' p={5} maxW={{ '2xl': '75%', xl: '90%', lg: "90%", md: "90%", sm: "90%", base: "90%" }} >
+                    <MotionText
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ x: 0, y: 0, opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        fontFamily='"Major Mono Display", monospace'
+                        // className='animation aniblock1'
+                        as="h1"
+                        fontSize={{ '2xl': '1vw', xl: '1vw' }}
+                        color="white"
+                    >
                         I'm
-                    </Heading>
-                    <Text className='animation aniblock2' as="h2" textAlign='center' fontSize={{ '2xl': '130px', xl: '100px', lg: '100px', md: '80px', sm: '80px', base: '35px' }} lineHeight='0.9' color="#ff4545BD" mt={2}>
+                    </MotionText>
+                    <MotionText
+                        initial={{ x: -500, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 2 }}
+                        // className=' aniblock2'
+                        as="h2"
+                        textAlign='center'
+                        fontSize={{ '2xl': '5vw', xl: '5vw', lg: '5vw', md: '5vw', sm: '5vw', base: '5vw' }}
+                        lineHeight='0.9'
+                        color="#ff4545BD"
+                        mt={2}
+                    >
                         &lt; Nikhil Kharche /&gt;
-                    </Text>
-                    <Text className='animation aniblock2' as="h2" textAlign='left' fontSize={{ '2xl': '35px', xl: '30px', lg: '30px', md: '30px', sm: '30px', base: '25px' }} lineHeight='0.9' color="#ebebeb" mb='20px'>
+                    </MotionText>
+                    <MotionText
+                        initial={{ x: 50, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 2 }}
+                        // className=' aniblock4'
+                        as="h2"
+                        textAlign='left'
+                        fontSize={{ '2xl': '2.5vw', xl: '2.5vw', lg: '2.5vw', md: '2.5vw', sm: '2.5vw', base: '2.5vw' }}
+                        lineHeight='0.9'
+                        color="#ebebeb"
+                        mb='20px'
+                    >
                         React Js Developer
-                    </Text>
-                    <Text className='animation aniblock3' fontSize='13px' color="#ebebeb" letterSpacing='1px' fontFamily='monospace' textAlign='center' >
-                        Passionate frontend developer at Knight Motion Media, Pune, with 6 months of experience in <span style={{ color: '#ff4545', m: '0px', fontFamily: 'monospace', fontSize: '14px' }}>React js, Bootstrap, Chakra Ui</span>. Committed to crafting engaging user experiences.
-                    </Text>
-                    <Button
-                        className='animation aniblock4'
+                    </MotionText>
+                    <MotionText
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ x: 0, y: 0, opacity: 1 }}
+                        transition={{ duration: 2.5 }}
+                        // className='animation aniblock3'
+                        // fontSize='13px'
+                        fontSize='1.2vw'
+                        color="#ebebeb"
+                        letterSpacing='1px'
+                        // fontFamily='monospace'
+                        textAlign='center'
+                    >
+                        Passionate frontend developer at Knight Motion Media, Pune, with 6 months of experience in <span style={{ color: '#ff4545', m: '0px', fontFamily: 'monospace', fontSize: '1.1vw' }}>React js, Bootstrap, Chakra Ui</span>. Committed to crafting engaging user experiences.
+                    </MotionText>
+                    <MotionButton
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={{ x: 0, y: 0, opacity: 1 }}
+                        transition={{ duration: 2 }}
+                        className=' aniblock4'
                         bgColor='transparent'
                         border='2px solid #ff4545'
                         color='#ebebeb'
                         letterSpacing='1px'
-                        _hover={{color:'#ebebeb'}}
+                        _hover={{ color: '#ebebeb' }}
                         zIndex='11'
                         borderRadius='0px'
                         // _hover={{ bgColor: '#ff4545', transform: 'scale(1.1)', color: '#ebebebf' }}
@@ -63,13 +127,13 @@ const Home = () => {
                         mt={4}
                     >
                         Resume
-                    </Button>
+                    </MotionButton>
                 </Flex>
             </Flex>
 
 
             {/* </Flex> */}
-        </Flex>
+        </MotionFlex >
 
 
     )
