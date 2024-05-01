@@ -5,9 +5,37 @@ import { motion } from 'framer-motion'
 
 const Contact_me = () => {
     const Mapflex = motion(Flex)
-   
+    const MotionFlex = motion(Flex);
+
+
+    const pageVariants = {
+        initial: {
+            // x: -300,
+            transform: 'scale(0)',
+            opacity: 0,
+            background: '#ff454596',
+            transition: { duration: 0.5 }, // Adjust duration as needed
+        },
+        exit: {
+            // x: -300,
+            transform: 'scale(2)',
+            opacity: 0,
+            background: '#ff454596',
+            transition: { duration: 0.5 }, // Adjust duration as needed
+        },
+        enter: {
+            opacity: 1,
+            transform: 'scale(1)',
+            background: '#1a1a1a',
+            transition: { duration: 1 }, // Adjust duration as needed
+        },
+    };
     return (
-        <Flex
+        <MotionFlex
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            variants={pageVariants}
             w='100%'
             h='100lvh'
             flexDirection='column'
@@ -54,7 +82,7 @@ const Contact_me = () => {
                     </Mapflex>
                 </Suspense>
             </Flex>
-        </Flex>
+        </MotionFlex>
     )
 }
 

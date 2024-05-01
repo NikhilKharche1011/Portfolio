@@ -12,22 +12,28 @@ const Home = () => {
     const MotionButton = motion(Button);
 
     const pageVariants = {
-        exit: {
-            y: -300,
-            background: '#ff454596',
+        initial: {
+            transform: 'scale(0)',
             opacity: 0,
-            transition: { duration: 0.1 }, // Adjust duration as needed
+            background: '#ff454596',
+            transition: { duration: 0.5 },
+        },
+        exit: {
+            transform: 'scale(2)',
+            opacity: 0,
+            background: '#ff454596',
+            transition: { duration: 0.5 },
         },
         enter: {
             opacity: 1,
-           y: 0,
+            transform: 'scale(1)',
             background: '#1a1a1a',
-            transition: { duration: 1 }, // Adjust duration as needed
+            transition: { duration: 1 },
         },
     };
     return (
         <MotionFlex
-            initial="exit"
+            initial="initial"
             animate="enter"
             exit="exit"
             variants={pageVariants}
@@ -79,6 +85,7 @@ const Home = () => {
                         lineHeight='0.9'
                         color="#ff4545BD"
                         mt={2}
+                        fontWeight='900'
                     >
                         &lt; Nikhil Kharche /&gt;
                     </MotionText>
@@ -93,6 +100,7 @@ const Home = () => {
                         lineHeight='0.9'
                         color="#ebebeb"
                         mb='20px'
+                        fontWeight='900'
                     >
                         React Js Developer
                     </MotionText>
