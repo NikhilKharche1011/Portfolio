@@ -113,7 +113,7 @@ const Navbar = () => {
                   <DrawerCloseButton _active={{ border: 'none', boxShadow: 'none' }} _focusVisible={{ outline: 'none !important' }} _focus={{ outline: 'none !important' }} position='static' color='#fff' m='0px' p='0px' fontSize={{ xl: '20px', lg: '20px', md: '20px', sm: '20px', base: '20px' }} />
                 </Flex>
                 <DrawerBody className='scrollcss' h='100%'>
-                  <Flex w='100%' flexDirection='column' justifyContent='center' h='100%' py='5%' alignItems='flex-start' pl='15%'>
+                  <Flex w='100%' flexDirection='column' justifyContent='center' h='100%' py='5%' alignItems='flex-start' pl={{base:'0%', sm:'15%'}}>
                     <Flex
                       position='relative'
                       my='15px'
