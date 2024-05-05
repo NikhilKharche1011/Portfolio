@@ -298,7 +298,7 @@ const Projects = () => {
                   fontSize={{ xl: '40px', lg: '40px', md: '36px', sm: '35px', base: '28px' }}
                   color='#ff4545'
                 >
-                  Uttara Impex
+                  Virtual Products
                 </MotionFlex>
                 <Flex>
                   <Box>
@@ -310,7 +310,7 @@ const Projects = () => {
                       as="p"
                       fontSize={{ xl: '17px', lg: '17px', md: '15px', sm: '17px', base: '15px' }}
                     >
-                      Uttara Impex is a Product showcase Website and WebApplication. Created userside and adminside including dashboaord on both sides.
+                      It is a Virtual Products WebApp and WebApplication. Created userside and adminside including dashboaord on both sides.
                     </MotionFlex>
 
                     <MotionFlex

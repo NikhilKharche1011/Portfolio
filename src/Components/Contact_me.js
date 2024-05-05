@@ -1,8 +1,27 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { Flex, Text, Box, Heading, Link, Button, Stack, Icon, Grid, GridItem } from '@chakra-ui/react'
+import {
+    Flex,
+    Text,
+    Box,
+    Heading,
+    Link,
+    Button,
+    Stack,
+    Icon,
+    Grid,
+    GridItem,
+    FormControl,
+    FormLabel,
+    Input,
+    Textarea,
+} from '@chakra-ui/react'
 import { FaTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 import { motion } from 'framer-motion'
+import map from '../assets/map_image.webp'
+
 const Contact_me = () => {
     const Mapflex = motion(Flex)
     const MotionFlex = motion(Flex);
@@ -58,60 +77,230 @@ const Contact_me = () => {
                 // bgImage={bg_image}
                 bgPosition='center'
                 bgSize='cover'
-                alignItems='center'
+                justifyContent='center'
                 flexDirection='column'
+                overflowY='scroll'
+                className='scrollcss'
             // position='relative'
             >
-                {/* <Flex w='100%' h='100%' position='relative' justifyContent='center' overflow='hidden'>
+                <Flex
+                    w='100%'
+                    h='60vh'
+                    bgImage={map}
+                    bgPosition='center'
+                    bgSize='cover'
+                    borderRadius='15px'
 
-                    <MotionFlex
-                        position='absolute'
-                        h='max-content'
-                        color='#ff4545'
-                        w='100%'
-                        zIndex='11'
-                            fontSize={{base:'30px', sm:'40px', md:'50px', lg:'60px', xl:'70px', '2xl':'80px'}}
-                            top={{base:'0px', sm:'0px', md:'-10px', lg:'-15px', xl:'-23px', '2xl':'-31px'}} 
-                    >
-                        <Text
-                            // fontSize='4.5vw'
-                        >
-                            Contact Me
-                        </Text>
-                    </MotionFlex>
-                    <Mapflex
+                    flexDirection={{ base: 'column', sm: 'column', md: 'row' }}
+                    justifyContent='space-around'
+                >
+                    <Flex
+                        width={{ base: '100%', sm: '100%', md: '30%', lg: '35%', xl: '35%' }}
+                        fontSize={{ base: '6vw', sm: '3.5vw' }}
+                        alignItems={{ base: 'flex-start', sm: 'flex-end' }}
+                        justifyContent='center'
                         h='100%'
-                        w='100%'
-                        // justifyContent='center'
-                        initial={{ x: -300, opacity: 0, backgroundColor: '#ff454500' }}
-                        exit={{ x: 300, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1, backgroundColor: '#ff454500' }}
-                        transition={{ duration: 1 }}
-                        my='30px'
-                        bgColor='#ff454'
-                        filter='grayscale(100%) invert(100%)'
+                        color='#ff4545'
                     >
+                        {/* <Text>
+                            Contact Me
+                        </Text> */}
+                    </Flex>
+                    <Flex
+                        w={{ base: '100%', sm: '100%', md: '35%', lg: '30%', xl: '25%' }}
+                        h='100%'
+                        transform={{ base: 'scale(1)', sm: 'scale(1)', md: 'scale(1.1)' }}
+                        borderRadius='5px'
+                        bgColor='#ebebeb'
+                        overflowY='scroll'
+                        className='scroll'
+                    >
+                        <Flex as='form' width='100%' flexDirection='column' overflowY='scroll' className='scroll' justifyContent='center' alignItems='flex-end' >
+                            <Flex w='100%' flexDirection='column' px='2%' overflowY='scroll' className='scroll'>
+                                <FormControl my='6%' variant='flushed'>
+                                    {/* <FormLabel  fontWeight='900'>Name</FormLabel> */}
+                                    <Input
+                                        _placeholder={{ color: '#000' }}
+                                        placeholder='Name'
+                                        m='0px'
+                                        color='#2a2a2a'
+                                        border='none'
+                                        borderBottom='1px solid #ccc'
+                                        borderRadius='0xp'
+                                        outline='none'
+                                        _focus={{ boxShadow: 'none' }}
+                                        _focusVisible={{ fontWeight: '900', border: 'none', boxShadow: 'none', color: '#0c0c0c', borderBottom: '2px solid #a6a6a6', bgColor: '#ccc' }}
+                                        _hover={{ borderBottom: '2px solid #a6a6a6' }}
+                                        type='text'
 
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04711140519!2d73.78056593920137!3d18.524598599722342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1714503919281!5m2!1sen!2sin"
-                            width="55%"
-                            style={{ height: "70vh", borderRadius: '30px', border: '3px solid #ff4545' }}
-                        ></iframe>
-                    </Mapflex>
-                </Flex> */}
-                <Box color='#fff'>
-                    <Heading as="h2">Let's Get in Touch: Ways to Connect with Me</Heading>
-                    <Text>
-                        I appreciate your interest in reaching out to me! If you have feedback, questions, or suggestions, feel free to email me at nkharche99@gmail.com I usually reply within 24 hours, but it might take longer during busy times. You can also connect with me on Instagram or LinkedIn for regular updates. I look forward to hearing from you!
-                    </Text>
-                    <Stack direction="row" spacing={4}>
-                        <Button leftIcon={<Icon as={FaTwitter} />}>Follow on Twitter</Button>
-                        <Button leftIcon={<Icon as={FaGithub} />}>Follow on GitHub</Button>
-                        <Button leftIcon={<Icon as={FaLinkedin} />}>Follow on LinkedIn</Button>
-                        <Button leftIcon={<Icon as={FaInstagram} />}>Follow on Instagram</Button>
-                    </Stack>
-                    <Text>mail@thomgard.dev</Text>
-                </Box>
+                                    />
+                                </FormControl>
+
+                                <FormControl my='6%' variant='flushed'>
+                                    {/* <FormLabel  fontWeight='900'>Email</FormLabel> */}
+                                    <Input
+                                        _placeholder={{ color: '#000' }}
+                                        placeholder='Email'
+                                        m='0px'
+                                        color='#2a2a2a'
+                                        border='none'
+                                        borderBottom='1px solid #ccc'
+                                        borderRadius='0xp'
+                                        outline='none'
+                                        _focus={{ boxShadow: 'none' }}
+                                        _focusVisible={{ fontWeight: '900', border: 'none', boxShadow: 'none', color: '#0c0c0c', borderBottom: '2px solid #a6a6a6', bgColor: '#ccc' }}
+                                        _hover={{ borderBottom: '2px solid #ff4545' }}
+                                        type='email'
+
+                                    />
+                                </FormControl>
+
+                                <FormControl my='6%' variant='flushed'>
+                                    {/* <FormLabel  fontWeight='900'>Message</FormLabel> */}
+                                    <Textarea
+                                        overflowY='scroll'
+                                        className='scrollcss'
+                                        _placeholder={{ color: '#000' }}
+                                        placeholder='Message'
+                                        m='0px'
+                                        color='#2a2a2a'
+                                        border='none'
+                                        borderBottom='1px solid #ccc'
+                                        borderRadius='0xp'
+                                        outline='none'
+                                        _focus={{ boxShadow: 'none' }}
+                                        fontWeight='900'
+                                        _focusVisible={{ fontWeight: '900', border: 'none', boxShadow: 'none', color: '#0c0c0c', borderBottom: '2px solid #a6a6a6', bgColor: '#ccc' }}
+                                        _hover={{ borderBottom: '2px solid #ff4545' }}
+                                        type='text'
+
+                                    />
+                                </FormControl>
+                            </Flex>
+                            <Button
+                                type='submit'
+                                w='fit-content'
+                                bgColor='#ff4545'
+                                borderRadius='0px'
+                                my='6%'
+                                _hover={{ bgColor: '#ff4545' }}
+                            >
+                                Send Message
+                            </Button>
+
+
+                        </Flex>
+                    </Flex>
+                </Flex>
+
+                <Flex
+                    mt='3%'
+                    alignItems='center'
+                    w='100%'
+                    flexDirection={{ base: 'column', sm: 'column', md: 'row' }}
+                >
+                    <Flex
+                        h='100%'
+                        width={{ base: '100%', sm: '34%' }}
+                        direction='column'
+                    >
+                        <Flex
+
+                            fontSize={{ base: '6vw', sm: '3.8vw' }}
+                            h='100%'
+                            color='#ff4545'
+                            overflowY='scroll' className='scroll'
+                            lineHeight='1'
+                        >
+                            <Text>
+                                Contact Me
+                            </Text>
+                        </Flex>
+                        <Flex>
+                            <Text
+                                color='#a6a6a6'
+                                fontSize={{ base: '2.3vw', sm: '1.5vw', md: '1vw' }}
+                            >
+                                You may reach out to me via the provided contact form or through the social media links.
+                            </Text>
+                        </Flex>
+                    </Flex>
+
+                    <Flex flexDirection='column' alignItems='center' justifyContent='center' width={{ base: '100%', sm: '40%' }}>
+                        <Text
+                            color='#ebebeb'
+                            fontSize={{ base: '2.3vw', sm: '1.5vw', md: '1vw' }}
+
+                        >
+                            Email
+                        </Text>
+                        <Text
+                            color='#a6a6a6'
+                            as='a'
+                            fontSize={{ base: '2.3vw', sm: '1.5vw', md: '1vw' }}
+                            href='mailto:nkharche99@gmail.com'
+                            _hover={{color:'#ff4545'}}
+                        >
+                            nkharche99@gmail.com
+                        </Text>
+
+                    </Flex>
+
+                    <Flex flexDirection='row' alignItems='center' justifyContent='flex-start' width={{ base: '100%', sm: '30%' }}>
+                        <Flex
+                            mx='10px'
+                            _hover={{color:'#ff4545'}}
+                            color='#a6a6a6'
+                            fontSize='2vw'
+
+                        >
+                            <Flex as='a' href='https://www.linkedin.com/in/nikhilkharche99/'>
+                                <FaLinkedin />
+                            </Flex>
+                        </Flex>
+
+                        <Flex
+                            mx='10px'
+                            _hover={{color:'#ff4545'}}
+                            color='#a6a6a6'
+                             fontSize='2vw'>
+                            <Flex
+                                as='a'
+                                href='https://github.com/NikhilKharche1011'
+                            >
+                                <FaGithub />
+                            </Flex>
+                        </Flex>
+                        <Flex
+                            mx='10px'
+                            _hover={{color:'#ff4545'}}
+                            color='#a6a6a6'
+                             fontSize='2vw'
+                        >
+                            <Flex
+                                as='a'
+                                href='https://www.instagram.com/_nikuhiru_/'
+                            >
+                                <FaInstagram />
+                            </Flex>
+                        </Flex>
+                        <Flex
+                            mx='10px'
+                            _hover={{color:'#ff4545'}}
+                            color='#a6a6a6'
+                             fontSize='2vw'
+                        >
+                            <Flex 
+                            as='a'
+                            href='https://twitter.com/NikhilKharche2'
+                            >
+                            <FaXTwitter />
+                            </Flex>
+                        </Flex>
+
+                    </Flex>
+
+                </Flex>
             </Flex>
             <MotionGrid
                 initial={{ transform: 'scale(0)' }}
