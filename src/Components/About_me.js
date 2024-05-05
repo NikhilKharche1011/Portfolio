@@ -15,6 +15,11 @@ const About_me = () => {
 
   const MotionFlex = motion(Flex);
   const MotionGriditem = motion(GridItem)
+  const MotionText = motion(Text)
+  const MotionListItem = motion(ListItem)
+  const MotionGrid = motion(Grid)
+  const MotionGridItem = motion(GridItem)
+
 
   const pageVariants = {
     initial: {
@@ -51,9 +56,10 @@ const About_me = () => {
       bgColor='#1a1a1a'
       bgPosition='center'
       bgSize='cover'
-      overflowY={{ base: 'scroll', sm: 'scroll', md: 'hidden' }}
+      overflowY={{ base: 'hidden', sm: 'hidden', md: 'hidden' }}
       className='scroll'
       alignItems='center'
+      position='relative'
     >
       <Navbar />
       <Flex
@@ -72,80 +78,184 @@ const About_me = () => {
           overflowY={{ base: 'scroll', sm: 'scroll', md: 'hidden' }}
           className='scroll'
           h='100%' alignItems={{ base: 'center', sm: 'center', md: 'flex-start' }} flexDirection={{ base: 'column', sm: 'column', md: 'row' }}>
-          <Flex mb={{ base: '20px', sm: '0px' }} w={{ base: '100%', sm: '100%', md: '55%', lg: '49%' }} h={{ base: '100%', sm: '100%', md: '90lvh' }} justifyContent='center' >
+          <MotionFlex
+            initial={{ y: 100, opacity: 0, transition: { duration: 1, delay:1  } }}
+            whileInView={{ y: 0, opacity: 1, transition: { duration: 1, delay:1 } }}
+            exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+            mb={{ base: '20px', sm: '0px' }} w={{ base: '100%', sm: '100%', md: '55%', lg: '49%' }} h={{ base: '100%', sm: '100%', md: '90lvh' }} justifyContent='center' >
             <Image h='100%' src={pic} />
-          </Flex>
+          </MotionFlex>
           <Flex overflowY={{ base: 'visible', sm: 'visible', md: 'scroll' }} className='scrollcss' w={{ base: '95%', sm: '95%', md: '75%', lg: '49%' }} h='100%' flexDirection='column' alignItems='flex-start' color='#ebebeb'>
-            <Text pl='10px' fontSize={{ '2xl': '60px', xl: '40px', lg: '40px', md: '40px', sm: '35px', base: '35px' }} color='#ff4545' lineHeight='1' mb='1'>
+            <MotionText
+              initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+              whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+              exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+              pl='10px'
+              fontSize={{ '2xl': '60px', xl: '40px', lg: '40px', md: '40px', sm: '35px', base: '35px' }}
+              color='#ff4545'
+              lineHeight='1'
+              mb='1'
+            >
               About me:
-            </Text>
+            </MotionText>
             <Flex pl='10px' flexDirection='column' mb='8'>
 
-              <Text >
+              <MotionText
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color='#a6a6a6'
+              >
                 Hey there! 👋 I'm Nikhil Kharche, a passionate frontend developer based in Pune. With a love for building user-centric web applications, I thrive on turning ideas into beautifully crafted digital experiences.
-              </Text>
+              </MotionText>
 
 
             </Flex>
             <Flex pl='10px' color="#fff" flexDirection="column">
-              <Text color="#ff4545" fontSize={{ '2xl': '35px', xl: '25px', lg: '25px', md: '25px', sm: '25px', base: '25px' }} >
+              <MotionText
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color="#ff4545"
+                fontSize={{ '2xl': '35px', xl: '25px', lg: '25px', md: '25px', sm: '25px', base: '25px' }}
+              >
                 Current Work:
-              </Text>
-              <Text mb="2">
+              </MotionText>
+              <MotionText
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color='#a6a6a6'
+                mb="2"
+              >
                 Knight Motion Media, Pune
-              </Text>
-              <Text mb="2">
-                Position: <Text as='code' color='#ff4545'> React Js Developer</Text>
-              </Text>
-              <Text mb="2">
+              </MotionText>
+              <MotionText
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color='#a6a6a6'
+                mb="2"
+              >
+                Position: <MotionText as='code' color='#ff4545'> React Js Developer</MotionText>
+              </MotionText>
+
+              <MotionText
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color='#a6a6a6'
+                mb="2"
+              >
                 Duration: Oct 2023 - Present
-              </Text>
-              <Text>
+              </MotionText>
+
+              <MotionText
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                color='#a6a6a6'
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+              >
                 Responsibilities:
-              </Text>
-              <UnorderedList pl="1">
-                <ListItem>
+              </MotionText>
+
+              <UnorderedList
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                pl="1"
+              >
+                <MotionListItem
+                  initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                  whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                color='#a6a6a6'
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                >
                   Collaborating with the design and development teams to conceptualize, develop, and maintain innovative web applications.
-                </ListItem>
+                </MotionListItem>
 
-                <ListItem>
+                <MotionListItem
+                  initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                  whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                  exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color='#a6a6a6'
+                >
                   Working closely with designers to ensure pixel-perfect implementation of UI designs.
-                </ListItem>
+                </MotionListItem>
 
-                <ListItem>
+                <MotionListItem
+                  initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                  whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                  exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color='#a6a6a6'
+                >
                   Enhancing user experience by optimizing performance, accessibility, and responsiveness of web applications.
-                </ListItem>
+                </MotionListItem>
               </UnorderedList>
               <NavLink to='/Projects' >
-                <Text my="8" display='flex' className='navbarfont' position='relative' color="#ff4545" fontSize={{ '2xl': '35px', xl: '25px', lg: '25px', md: '25px', sm: '25px', base: '25px' }}>
-                  My Work <Text mx='5px'><ExternalLinkIcon color='#ff4545' fontSize={{ base: '15px', sm: '18px' }} /></Text>
-                </Text>
+                <MotionText
+                  initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                  whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                  exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                  my="8" display='flex' className='navbarfont' position='relative' color="#ff4545" fontSize={{ '2xl': '35px', xl: '25px', lg: '25px', md: '25px', sm: '25px', base: '25px' }}>
+                  My Work <MotionText mx='5px'><ExternalLinkIcon color='#ff4545' fontSize={{ base: '15px', sm: '18px' }} /></MotionText>
+                </MotionText>
               </NavLink>
             </Flex>
 
             <Flex pl='10px' flexDirection='column'>
 
-              <Text color="#ff4545" fontSize={{ '2xl': '35px', xl: '25px', lg: '25px', md: '25px', sm: '25px', base: '25px' }}>
+              <MotionText
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color="#ff4545" fontSize={{ '2xl': '35px', xl: '25px', lg: '25px', md: '25px', sm: '25px', base: '25px' }}>
                 Education:
-              </Text>
+              </MotionText>
 
-              <Text mb="2">
+              <MotionText
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color='#a6a6a6'
+                mb="2"
+              >
                 Bachelor's Degree in Electronics and Communication
-              </Text>
-              <Text mb="2">
+              </MotionText>
+
+              <MotionText
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color='#a6a6a6'
+                mb="2"
+              >
                 University: Nagpur University
-              </Text>
-              <Text mb="2">
+              </MotionText>
+
+              <MotionText
+                initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                color='#a6a6a6'
+                mb="2"
+              >
                 Duration: 2017 - 2021
-              </Text>
+              </MotionText>
             </Flex>
 
 
             <Flex h='100%' w={{ base: '100%', sm: '100%', md: '100%', lg: '100%' }} alignItems='center' flexDirection='column' my={{ base: '20px', sm: '20px', md: '40px' }}>
-              <Flex w='100%'  justifyContent='center' alignItems='center' flexDirection='column'>
-                <Text color='#ff4545' fontSize={{ xl: '40px', lg: '40px', md: '40px', sm: '35px', base: '35px' }}>
+              <Flex w='100%' justifyContent='center' alignItems='center' flexDirection='column'>
+                <MotionText
+                  initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                  whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                  exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
+                  color='#ff4545'
+                  fontSize={{ xl: '40px', lg: '40px', md: '40px', sm: '35px', base: '35px' }}
+                >
                   Skills
-                </Text>
+                </MotionText>
                 <Grid
                   overflow='hidden'
                   py='20px'
@@ -159,23 +269,24 @@ const About_me = () => {
                   gap={6}
                 >
                   <MotionGriditem
-                    initial={{ x: 100, opacity: 1, transition: { duration: 1 } }}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-                    exit={{ x: -100, opacity: 1, transition: { duration: 1 } }}
+                    initial={{ y: 100, opacity: 0, transition: { duration: 1 } }}
+                    whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                    exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
                     display='flex'
                     flexDirection='column'
                     placeItems='center'
                     maxW='100%'
                     h='100%'
                   >
-                    <Flex h='100%' color='#fff' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #fff, 3px 3px 10px #000 ', bgColor: 'rgba(255, 255, 255, 0.2276)' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
+                    <Flex h='100%' color='#fff' borderRadius='15px' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #0c0c0c, 3px 3px 10px #0c0c0c ', bgColor: '#313638', color: '#ff4545' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
                       <Image
                         h={{ base: '45px', sm: '90px', md: '110px' }}
                         w={{ base: '50px', sm: '100px', md: '120px' }}
                         src={Reacticon}
                       />
                       <Flex>
-                        <Text my='10px' fontWeight='600'>
+                
+                        <Text color='#a6a6a6' my='10px' fontWeight='600'>
                           React js
                         </Text>
                       </Flex>
@@ -183,9 +294,9 @@ const About_me = () => {
                   </MotionGriditem>
 
                   <MotionGriditem
-                    initial={{ x: -100, opacity: 1, transition: { duration: 1 } }}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-                    exit={{ x: 100, opacity: 1, transition: { duration: 1 } }}
+                    initial={{ y: 100, opacity: 1, transition: { duration: 1 } }}
+                    whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                    exit={{ y: -100, opacity: 1, transition: { duration: 1 } }}
                     display='flex'
                     justifyContent='center'
                     flexDirection='column'
@@ -193,14 +304,14 @@ const About_me = () => {
                     maxW='100%'
                     h='100%'
                   >
-                    <Flex h='100%' color='#fff' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #fff, 3px 3px 10px #000 ', bgColor: 'rgba(255, 255, 255, 0.2276)' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
+                    <Flex h='100%' color='#fff' borderRadius='15px' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #0c0c0c, 3px 3px 10px #0c0c0c ', bgColor: '#313638', color: '#ff4545' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
                       <Image
                         h={{ base: '50px', sm: '100px', md: '120px' }}
                         w={{ base: '50px', sm: '100px', md: '120px' }}
                         src={Chakraui}
                       />
                       <Flex>
-                        <Text my='10px'>
+                        <Text color='#a6a6a6' my='10px'>
                           Chakra UI
                         </Text>
                       </Flex>
@@ -208,9 +319,9 @@ const About_me = () => {
                   </MotionGriditem>
 
                   <MotionGriditem
-                    initial={{ x: 100, opacity: 1, transition: { duration: 1 } }}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-                    exit={{ x: -100, opacity: 1, transition: { duration: 1 } }}
+                    initial={{ y: 100, opacity: 1, transition: { duration: 1 } }}
+                    whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                    exit={{ y: -100, opacity: 1, transition: { duration: 1 } }}
                     display='flex'
                     justifyContent='center'
                     flexDirection='column'
@@ -218,14 +329,14 @@ const About_me = () => {
                     maxW='100%'
                     h='100%'
                   >
-                    <Flex h='100%' color='#fff' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #fff, 3px 3px 10px #000 ', bgColor: 'rgba(255, 255, 255, 0.2276)' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
+                    <Flex h='100%' color='#fff' borderRadius='15px' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #0c0c0c, 3px 3px 10px #0c0c0c ', bgColor: '#313638', color: '#ff4545' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
                       <Image
                         h={{ base: '45px', sm: '90px', md: '110px' }}
                         w={{ base: '50px', sm: '100px', md: '120px' }}
                         src={Bootstrap}
                       />
                       <Flex>
-                        <Text my='10px'>
+                        <Text color='#a6a6a6' my='10px'>
                           Bootstrap
                         </Text>
                       </Flex>
@@ -235,9 +346,9 @@ const About_me = () => {
 
 
                   <MotionGriditem
-                    initial={{ x: -100, opacity: 1, transition: { duration: 1 } }}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-                    exit={{ x: 100, opacity: 1, transition: { duration: 1 } }}
+                    initial={{ y: 100, opacity: 1, transition: { duration: 1 } }}
+                    whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                    exit={{ y: -100, opacity: 1, transition: { duration: 1 } }}
                     display='flex'
                     justifyContent='center'
                     flexDirection='column'
@@ -245,14 +356,14 @@ const About_me = () => {
                     maxW='100%'
                     h='100%'
                   >
-                    <Flex h='100%' color='#fff' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #fff, 3px 3px 10px #000 ', bgColor: 'rgba(255, 255, 255, 0.2276)' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
+                    <Flex h='100%' color='#fff' borderRadius='15px' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #0c0c0c, 3px 3px 10px #0c0c0c ', bgColor: '#313638', color: '#ff4545' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
                       <Image
                         h={{ base: '50px', sm: '100px', md: '120px' }}
                         w={{ base: '50px', sm: '100px', md: '120px' }}
                         src={Html}
                       />
                       <Flex>
-                        <Text my='10px' >
+                        <Text color='#a6a6a6' my='10px' >
                           HTML
                         </Text>
                       </Flex>
@@ -260,9 +371,9 @@ const About_me = () => {
                   </MotionGriditem>
 
                   <MotionGriditem
-                    initial={{ x: 100, opacity: 1, transition: { duration: 1 } }}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-                    exit={{ x: -100, opacity: 1, transition: { duration: 1 } }}
+                    initial={{ y: 100, opacity: 1, transition: { duration: 1 } }}
+                    whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                    exit={{ y: -100, opacity: 1, transition: { duration: 1 } }}
                     display='flex'
                     justifyContent='center'
                     flexDirection='column'
@@ -270,14 +381,14 @@ const About_me = () => {
                     maxW='100%'
                     h='100%'
                   >
-                    <Flex h='100%' color='#fff' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #fff, 3px 3px 10px #000 ', bgColor: 'rgba(255, 255, 255, 0.2276)' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
+                    <Flex h='100%' color='#fff' borderRadius='15px' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #0c0c0c, 3px 3px 10px #0c0c0c ', bgColor: '#313638', color: '#ff4545' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
                       <Image
                         h={{ base: '50px', sm: '100px', md: '120px' }}
                         w={{ base: '50px', sm: '100px', md: '120px' }}
                         src={css}
                       />
                       <Flex>
-                        <Text my='10px'>
+                        <Text color='#a6a6a6' my='10px'>
                           CSS
                         </Text>
                       </Flex>
@@ -285,9 +396,9 @@ const About_me = () => {
                   </MotionGriditem>
 
                   <MotionGriditem
-                    initial={{ x: -100, opacity: 1, transition: { duration: 1 } }}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-                    exit={{ x: 100, opacity: 1, transition: { duration: 1 } }}
+                    initial={{ y: 100, opacity: 1, transition: { duration: 1 } }}
+                    whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                    exit={{ y: -100, opacity: 1, transition: { duration: 1 } }}
                     display='flex'
                     justifyContent='center'
                     flexDirection='column'
@@ -295,14 +406,14 @@ const About_me = () => {
                     maxW='100%'
                     h='100%'
                   >
-                    <Flex h='100%' color='#fff' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #fff, 3px 3px 10px #000 ', bgColor: 'rgba(255, 255, 255, 0.2276)' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
+                    <Flex h='100%' color='#fff' borderRadius='15px' boxShadow='0px 0px 1px #000, 3px 3px 4px #000 ' transition='0.5s ease' _hover={{ transform: 'scale(1.05)', boxShadow: '0px 0px 1px #0c0c0c, 3px 3px 10px #0c0c0c ', bgColor: '#313638', color: '#ff4545' }} flexDirection='column' alignItems='center' justifyContent='space-between' py='3%' w='200px' bgColor='rgba(0, 0, 0, 0.1276)'>
                       <Image
                         h={{ base: '50px', sm: '100px', md: '120px' }}
                         w={{ base: '50px', sm: '100px', md: '120px' }}
                         src={js}
                       />
                       <Flex>
-                        <Text my='10px'>
+                        <Text color='#a6a6a6' my='10px'>
                           JavaScript
                         </Text>
                       </Flex>
@@ -312,16 +423,829 @@ const About_me = () => {
 
 
                 </Grid>
-                <Flex>
+                <Flex h={{ base: '5vh', sm: '0vh' }} bgColor='#1a1a1a00' w='100%'>
 
                 </Flex>
               </Flex>
 
             </Flex>
-            
+
           </Flex>
         </Flex>
       </Flex>
+
+      <MotionGrid
+                    initial={{ transform: 'scale(0)' }}
+                    animate={{ transform: 'scale(1)' }}
+                    h='100vh'
+                    zIndex='-1'
+                    width='100%'
+                    templateColumns={{ base: 'repeat(4, 1fr)', sm: 'repeat(7, 1fr)', md: 'repeat(10, 1fr)' }}
+                    position='absolute'
+                    top='0px'
+                    left='0px'
+                >
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                    <MotionGridItem
+                        initial={{ border: '2px solid #fff' }}
+                        animate={{ border: '1px solid #0c0c0c' }}
+                        transition={{ duration: 1 }}
+                        w='100%'
+                        h='10vh'
+                        border='1px solid #0c0c0c'
+                    />
+                </MotionGrid>
     </MotionFlex>
   )
 }

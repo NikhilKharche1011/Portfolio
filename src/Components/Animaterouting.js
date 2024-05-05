@@ -2,16 +2,12 @@ import React, { lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
-// const Home = lazy(() => import('./Home'))
-// const Projects = lazy(() => import('./Projects'))
-// const About = lazy(() => import('./About_me'))
-// const Resume = lazy(() => import('./Resume'))
-// const Contact = lazy(() => import('./Contact_me'))
-import Home from './Home'
-import Projects from './Projects'
-import About from './About_me'
-import Resume from './Resume'
-import Contact from './Contact_me'
+const Home = lazy(() => import('./Home'))
+const Projects = lazy(() => import('./Projects'))
+const About = lazy(() => import('./About_me'))
+const Resume = lazy(() => import('./Resume'))
+const Contact = lazy(() => import('./Contact_me'))
+
 
 
 const Animaterouting = () => {

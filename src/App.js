@@ -1,9 +1,7 @@
 import React, { Suspense, lazy } from 'react';
-import { ChakraProvider, Flex, Text, extendTheme } from '@chakra-ui/react';
+import { ChakraProvider, Flex, Text, extendTheme, Spinner } from '@chakra-ui/react';
 import { HashRouter as Router } from 'react-router-dom';
-// const Animaterouting = lazy(() => import('./Components/Animaterouting'))
-import Animaterouting from './Components/Animaterouting'
-
+const Animaterouting = lazy(() => import('./Components/Animaterouting'))
 function App() {
   const customtheme = extendTheme({
 
@@ -19,19 +17,23 @@ function App() {
 
   return (
     <ChakraProvider theme={customtheme}>
-      {/* <Suspense fallback={
+      <Suspense fallback={
         <>
           <Flex h='100lvh' width='100%' bgColor='#1a1a1a' justifyContent='center' alignItems='center'>
-            <Text color='#ff4545' fontSize='50px'>
-              LOADING...
-            </Text>
+            <Spinner
+              thickness='5px'
+              speed='1s'
+              emptyColor='#2a2a2a'
+              color='#ff4545'
+              size='xl'
+            />
           </Flex>
         </>
-      }> */}
+      }>
         <Router>
           <Animaterouting />
         </Router>
-      {/* </Suspense> */}
+      </Suspense>
 
 
 
