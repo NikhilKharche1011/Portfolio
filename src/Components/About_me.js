@@ -262,7 +262,7 @@ const About_me = () => {
                   // className='scrollcss2'
                   // my='15px'
                   placeContent='center'
-                  templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(3, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}
+                  templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}
                   width='100%'
                   h='100%'
                   // columnGap={4}

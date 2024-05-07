@@ -7,7 +7,7 @@ function App() {
 
     breakpoints: {
       base: '0em',
-      sm: '40em',
+      sm: '33em',
       md: '48em',
       lg: '62em',
       xl: '80em',
