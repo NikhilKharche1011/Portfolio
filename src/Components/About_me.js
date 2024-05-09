@@ -27,20 +27,20 @@ const About_me = () => {
       transform: 'scale(0)',
       opacity: 0,
       background: '#ff454596',
-      transition: { duration: 0.5 }, // Adjust duration as needed
+      transition: { duration: 0.8  }, // Adjust duration as needed
     },
     exit: {
       // x: -300,
       transform: 'scale(2)',
       opacity: 0,
       background: '#ff454596',
-      transition: { duration: 0.5 }, // Adjust duration as needed
+      transition: { duration: 0.2   }, // Adjust duration as needed
     },
     enter: {
       opacity: 1,
       transform: 'scale(1)',
       background: '#1a1a1a',
-      transition: { duration: 1 }, // Adjust duration as needed
+      transition: { duration: 0.8   }, // Adjust duration as needed
     },
   };
   return (
@@ -79,8 +79,8 @@ const About_me = () => {
           className='scroll'
           h='100%' alignItems={{ base: 'center', sm: 'center', md: 'flex-start' }} flexDirection={{ base: 'column', sm: 'column', md: 'row' }}>
           <MotionFlex
-            initial={{ y: 100, opacity: 0, transition: { duration: 1, delay:1  } }}
-            whileInView={{ y: 0, opacity: 1, transition: { duration: 1, delay:1 } }}
+            initial={{ y: 100, opacity: 0, transition: { duration: 1,   } }}
+            whileInView={{ y: 0, opacity: 1, transition: { duration: 1,  } }}
             exit={{ y: -100, opacity: 0, transition: { duration: 1 } }}
             mb={{ base: '20px', sm: '0px' }} w={{ base: '100%', sm: '100%', md: '55%', lg: '49%' }} h={{ base: '100%', sm: '100%', md: '90lvh' }} justifyContent='center' >
             <Image h='100%' src={pic} />

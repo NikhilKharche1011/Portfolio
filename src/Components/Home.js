@@ -23,19 +23,19 @@ const Home = () => {
             transform: 'scale(0)',
             opacity: 0,
             background: '#ff454596',
-            transition: { duration: 0.5 },
+            transition: { duration: 0.8  },
         },
         exit: {
             transform: 'scale(2)',
             opacity: 0,
             background: '#ff454596',
-            transition: { duration: 0.5 },
+            transition: { duration: 0.2   },
         },
         enter: {
             opacity: 1,
             transform: 'scale(1)',
             background: '#1a1a1a',
-            transition: { duration: 1 },
+            transition: { duration: 0.8   },
         },
     };
     return (

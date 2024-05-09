@@ -15,20 +15,20 @@ const Resume = () => {
       transform: 'scale(0)',
       opacity: 0,
       background: '#ff454596',
-      transition: { duration: 0.5 }, // Adjust duration as needed
+      transition: { duration: 0.8   }, // Adjust duration as needed
     },
     exit: {
       // x: -300,
       transform: 'scale(2)',
       opacity: 0,
       background: '#ff454596',
-      transition: { duration: 0.5 }, // Adjust duration as needed
+      transition: { duration: 0.8   }, // Adjust duration as needed
     },
     enter: {
       opacity: 1,
       transform: 'scale(1)',
       background: '#1a1a1a',
-      transition: { duration: 1.2 }, // Adjust duration as needed
+      transition: { duration: 0.8   }, // Adjust duration as needed
     },
   };
   return (
@@ -51,9 +51,7 @@ const Resume = () => {
       <Navbar />
       <Flex>
 
-        <Text color='white'>
-          Resume
-        </Text>
+      
       </Flex>
       <MotionGrid
         initial={{ transform: 'scale(0)' }}

@@ -63,7 +63,8 @@ const Navbar = () => {
                   About
                 </NavLink>
               </Flex>
-              <Flex
+
+              {/* <Flex
                 position='relative'
                
                 letterSpacing='2px'
@@ -74,7 +75,8 @@ const Navbar = () => {
                 <NavLink to='/Resume' className='navbarfont'>
                   Resume
                 </NavLink>
-              </Flex>
+              </Flex> */}
+
               <Flex
                 position='relative'
                
@@ -103,7 +105,7 @@ const Navbar = () => {
 
             >
               <DrawerOverlay />
-              <DrawerContent h='100lvh' bgColor='#1a1a1aeb' transition='transform 1s ease-in-out'>
+              <DrawerContent h='100lvh' bgColor='#1a1a1aeb' transition='transform 0.5s ease-in-out'>
                 <Flex py='5px' px={{ xl: '5%', lg: '5%', md: '5%', sm: '5%', base: '3%' }} w='100%' justifyContent='space-between'>
                   <DrawerHeader color='#fff' className='navbar_header' justifyContent='flex-start' p='0px' fontSize='25px' letterSpacing='2px'>
                     <NavLink to='/'>
@@ -150,7 +152,8 @@ const Navbar = () => {
                         About
                       </NavLink>
                     </Flex>
-                    <Flex
+
+                    {/* <Flex
                       position='relative'
                       my='15px'
                       letterSpacing='2px'
@@ -161,7 +164,8 @@ const Navbar = () => {
                       <NavLink to='/Resume' className='navbarfont'>
                         Resume
                       </NavLink>
-                    </Flex>
+                    </Flex> */}
+
                     <Flex
                       position='relative'
                       my='15px'
