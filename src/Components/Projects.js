@@ -22,19 +22,19 @@ const Projects = () => {
       transform: 'scale(0)',
       opacity: 0,
       background: '#ff454596',
-      transition: { duration: 0.8   }, // Adjust duration as needed
+      transition: { duration: 0.8 }, // Adjust duration as needed
     },
     exit: {
       transform: 'scale(2)',
       opacity: 0,
       background: '#ff454596',
-      transition: { duration: 0.2   }, // Adjust duration as needed
+      transition: { duration: 0.2 }, // Adjust duration as needed
     },
     enter: {
       opacity: 1,
       transform: 'scale(1)',
       background: '#1a1a1a',
-      transition: { duration: 0.8   },
+      transition: { duration: 0.8 },
     },
   };
   return (
@@ -74,37 +74,37 @@ const Projects = () => {
           <Flex w={{ xl: '90%', lg: '90%', md: '90%', sm: '95%', base: '100%' }} my='3%' mt={{ xl: '40px', lg: '40px', md: '36px', sm: '0%', base: '0%' }} alignItems='center' >
             <Grid h='100%' w='100%' templateColumns={{ xl: 'repeat(2, 1fr)', lg: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', sm: 'repeat(1, 1fr)', base: 'repeat(1, 1fr)' }} gap={{ base: 0, sm: 0, md: 4, lg: 6 }}>
               <GridItem h='100%' order={{ base: 2, sm: 2, md: 1 }} px={{ xl: '0%', lg: '0%', md: '0%', sm: '0%', base: '5%' }} w='100%' color='#a6a6a6'    >
-                <Link to="https://foxymatic.com" target='_blank' >
-                  <MotionFlex
-                    initial={{ x: -100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    exit={{ x: 100, opacity: 0 }}
-                    transition={{ duration: 0.5, }}
-                    fontSize={{ xl: '40px', lg: '40px', md: '36px', sm: '35px', base: '28px' }}
-                    alignItems='center'
-                    color='#ff4545'
-                  >
-                    Foxymatic.com <Text mx='5px' mt='5px'><ExternalLinkIcon color='#ff4545' fontSize='15px' /></Text>
-                  </MotionFlex>
-                </Link>
+
+                <MotionFlex
+                  initial={{ y: -100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  exit={{ y: 100, opacity: 0 }}
+                  transition={{ duration: 0.5, }}
+                  fontSize={{ xl: '40px', lg: '40px', md: '36px', sm: '35px', base: '28px' }}
+                  alignItems='center'
+                  color='#ff4545'
+                >
+                  Thermax Steam LMS <Text mx='5px' mt='5px'></Text>
+                </MotionFlex>
+
                 <Flex>
                   <Box >
                     <MotionFlex
-                      initial={{ x: -100, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      exit={{ x: 100, opacity: 0 }}
+                      initial={{ y: -100, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      exit={{ y: 100, opacity: 0 }}
                       transition={{ duration: 0.5, }}
                       as="p"
                       textAlign='justify'
                       fontSize={{ xl: '17px', lg: '17px', md: '15px', sm: '17px', base: '15px' }}
                     >
-                      Foxymatic.com is a Web service Provider website providing all kind of web solutions. In this project, I created a responsive website using React JS and Bootstrap.
+                      Thermax Steam is a streamlined LMS web app featuring dedicated user and admin interfaces, designed for efficient learning management and administration.
                     </MotionFlex>
 
                     <MotionFlex
-                      initial={{ x: -100, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      exit={{ x: 100, opacity: 0 }}
+                      initial={{ y: -100, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      exit={{ y: 100, opacity: 0 }}
                       transition={{ duration: 0.5, }}
                       as="h2"
                       mt='20px'
@@ -116,33 +116,43 @@ const Projects = () => {
 
                     <UnorderedList>
                       <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 0.5, }}
                         fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
                       >
-                        Created a responsive website using media queries and the column section system of Bootstrap.
+                        Developer responsive Admin and User Dashboard using React JS.
                       </MotionListItem>
 
                       <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 0.5, }}
                         fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
                       >
-                        Worked on optimizing website performance by using lazy loading for images and choosing efficient formats like WebP instead of JPG, PNG, and GIF.
+                        Integrated Restful API for real time data management.
                       </MotionListItem>
 
                       <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 0.5, }}
                         fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
                       >
-                        Libraries Used: lazyloading
+                        Utilized CSS and Chakra UI for mobile Friendly, adaptable layouts
+                      </MotionListItem>
+
+                      <MotionListItem
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
+                        transition={{ duration: 0.5, }}
+                        fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
+                      >
+                        Delivered a scalable solution with proper optimized performance and enhanced user engagement.
                       </MotionListItem>
 
                     </UnorderedList>
@@ -159,9 +169,9 @@ const Projects = () => {
                 >
 
                   <MotionFlex
-                    initial={{ x: 100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    exit={{ x: -100, opacity: 0 }}
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    exit={{ y: -100, opacity: 0 }}
                     transition={{ duration: 1, }}
                     justifyContent='center'
                     alignItems='center'
@@ -182,32 +192,32 @@ const Projects = () => {
             <Grid h='100%' placeContent='center' w='100%' templateColumns={{ xl: 'repeat(2, 1fr)', lg: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', sm: 'repeat(1, 1fr)', base: 'repeat(1, 1fr)' }} gap={{ base: 0, sm: 0, md: 4, lg: 6 }}>
               <GridItem h='100%' order={{ base: 2, sm: 2, md: 1 }} px={{ xl: '0%', lg: '0%', md: '0%', sm: '0%', base: '5%' }} w='100%' color='#a6a6a6'   >
                 <MotionFlex
-                  initial={{ x: -100, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: 100, opacity: 0 }}
+                  initial={{ y: -100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 100, opacity: 0 }}
                   transition={{ duration: 1, }}
                   fontSize={{ xl: '40px', lg: '40px', md: '36px', sm: '35px', base: '28px' }}
                   color='#ff4545'
                 >
-                  VideoFide
+                  Thermax 3D Verse
                 </MotionFlex>
                 <Flex>
                   <Box>
                     <MotionFlex
-                      initial={{ x: -100, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      exit={{ x: 100, opacity: 0 }}
+                      initial={{ y: -100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: 100, opacity: 0 }}
                       transition={{ duration: 1, }}
                       as="p"
                       fontSize={{ xl: '17px', lg: '17px', md: '15px', sm: '17px', base: '15px' }}
                     >
-                      VideoFide is  a Product based WebApplication. Created userside and adminside including dashboaord on both sides.
+                      Thermax 3D Verse is a project designed to visually showcase Thermax plants, providing an immersive representation of their structure and functionality.
                     </MotionFlex>
 
                     <MotionFlex
-                      as="h2" initial={{ x: -100, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      exit={{ x: 100, opacity: 0 }}
+                      as="h2" initial={{ y: -100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: 100, opacity: 0 }}
                       transition={{ duration: 1, }}
                       mt='20px'
                       color='#ebebeb'
@@ -218,40 +228,40 @@ const Projects = () => {
 
                     <UnorderedList>
                       <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 1, }}
                         fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
                       >
-                        Create a Responsive Admin dashboard and userdashboard using React js and Chakra Ui.
+                        Developed a responsive admin dashboard to analyse .exe file usage, providing insights into the most visited plants and specific plant sections for better understanding and decision-making.
                       </MotionListItem>
                       <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 1, }}
                         fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
                       >
-                        Integrated APIs into web applications to enable real-time data exchange and enhance functionality with data validation and error handling.
+                        Integrated Restful API for analytics visualization.
                       </MotionListItem>
                       <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 1, }}
                         fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
                       >
-                        Secured the api using OAuth authentication using JSON Web Tokens (JWT) provided during the login of the User or Admin.
+                        Utilized CSS and Chakra UI for a mobile-friendly, adaptable layout, enhancing accessibility on various devices.
                       </MotionListItem>
                       <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 1, }}
                         fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
                       >
-                        Libraries Used – React-hot-toast , React-icons ,  Suspense with lazy.
+                        Delivered a scalable and maintainable solution to support data-driven decision-making and improve user engagement.
                       </MotionListItem>
                     </UnorderedList>
                   </Box>
@@ -268,9 +278,9 @@ const Projects = () => {
                 >
 
                   <MotionFlex
-                    initial={{ x: 100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    exit={{ x: -100, opacity: 0 }}
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    exit={{ y: -100, opacity: 0 }}
                     transition={{ duration: 1, }}
                     justifyContent='center'
                     alignItems='center'
@@ -290,33 +300,35 @@ const Projects = () => {
           <Flex flexDirection='column' w={{ xl: '90%', lg: '90%', md: '90%', sm: '95%', base: '100%' }} my='3%' mt='40px' alignItems='center'>
             <Grid placeItems='center' w='100%' templateColumns={{ xl: 'repeat(2, 1fr)', lg: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', sm: 'repeat(1, 1fr)', base: 'repeat(1, 1fr)' }} gap={{ base: 0, sm: 0, md: 4, lg: 6 }}>
               <GridItem h='100%' order={{ base: 2, sm: 2, md: 1 }} px={{ xl: '0%', lg: '0%', md: '0%', sm: '0%', base: '5%' }} w='100%' color='#a6a6a6'    >
-                <MotionFlex
-                  initial={{ x: -100, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  exit={{ x: 100, opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                  fontSize={{ xl: '40px', lg: '40px', md: '36px', sm: '35px', base: '28px' }}
-                  color='#ff4545'
-                >
-                  Virtual Products
-                </MotionFlex>
+                <Link to="https://marworx.com" target='_blank' >
+                  <MotionFlex
+                    initial={{ y: -100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    exit={{ y: 100, opacity: 0 }}
+                    transition={{ duration: 0.8 }}
+                    fontSize={{ xl: '40px', lg: '40px', md: '36px', sm: '35px', base: '28px' }}
+                    color='#ff4545'
+                  >
+                    Marworx Official Website
+                  </MotionFlex>
+                </Link>
                 <Flex>
                   <Box>
                     <MotionFlex
-                      initial={{ x: -100, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      exit={{ x: 100, opacity: 0 }}
+                      initial={{ y: -100, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      exit={{ y: 100, opacity: 0 }}
                       transition={{ duration: 0.8 }}
                       as="p"
                       fontSize={{ xl: '17px', lg: '17px', md: '15px', sm: '17px', base: '15px' }}
                     >
-                      It is a Virtual Products WebApp and WebApplication. Created userside and adminside including dashboaord on both sides.
+                      Developed the official website for Marworx, focusing on a modern, responsive design to ensure seamless accessibility and user engagement.
                     </MotionFlex>
 
                     <MotionFlex
-                      initial={{ x: -100, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      exit={{ x: 100, opacity: 0 }}
+                      initial={{ y: -100, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      exit={{ y: 100, opacity: 0 }}
                       transition={{ duration: 0.8 }}
                       as="h2"
                       color='#ebebeb'
@@ -328,43 +340,34 @@ const Projects = () => {
 
                     <UnorderedList>
                       <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 0.8, }}
                         fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
                       >
-                        Create a Responsive Admin dashboard and userdashboard using React js and Chakra Ui.
+                        Developed the official Website of my Company with focus on modern and response design.
                       </MotionListItem>
 
                       <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 0.8, }}
                         fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
                       >
-                        Integrated APIs into web applications to enable real-time data exchange and enhance functionality with data validation and error handling.
+
+                        Built using Chakra UI to create a clean consistent look with the whole page.
                       </MotionListItem>
 
                       <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 0.8, }}
                         fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
                       >
-                        Secured the api using OAuth authentication using JSON Web Tokens (JWT) provided during the login of the User or Admin.
-                      </MotionListItem>
-
-                      <MotionListItem
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        exit={{ x: 100, opacity: 0 }}
-                        transition={{ duration: 0.8, }}
-                        fontSize={{ xl: '15px', lg: '15px', md: '13px', sm: '15px', base: '13px' }}
-                      >
-                        Libraries Used – React-hot-toast , React-icons , Suspense with lazy, React-pageflip.
+                        Entrusted mobile responsiveness for seamless accessibility on any device.
                       </MotionListItem>
 
                     </UnorderedList>
@@ -382,9 +385,9 @@ const Projects = () => {
                 >
 
                   <MotionFlex
-                    initial={{ x: 100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    exit={{ x: -100, opacity: 0 }}
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    exit={{ y: -100, opacity: 0 }}
                     transition={{ duration: 0.8, }}
                     justifyContent='center'
                     alignItems='center'

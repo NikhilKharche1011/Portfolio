@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-import Resume from '../assets/Nikhil_Kharche_resume.pdf'
+import Resume from '../assets/Nikhil_resume_nov_2024.pdf'
 
 const Home = () => {
     const MotionText = motion(Text);
@@ -23,19 +23,19 @@ const Home = () => {
             transform: 'scale(0)',
             opacity: 0,
             background: '#ff454596',
-            transition: { duration: 0.8  },
+            transition: { duration: 0.8 },
         },
         exit: {
             transform: 'scale(2)',
             opacity: 0,
             background: '#ff454596',
-            transition: { duration: 0.2   },
+            transition: { duration: 0.2 },
         },
         enter: {
             opacity: 1,
             transform: 'scale(1)',
             background: '#1a1a1a',
-            transition: { duration: 0.8   },
+            transition: { duration: 0.8 },
         },
     };
     return (
@@ -876,14 +876,22 @@ const Home = () => {
                         border='1px solid #0c0c0c'
                     />
                 </MotionGrid>
-                <Flex zIndex='1' flexDirection='column' justifyContent='center' alignItems='center' p={{ base: "0px", sm: '5px' }} maxW={{ '2xl': '75%', xl: '90%', lg: "90%", md: "90%", sm: "90%", base: "90%" }} >
+                <Flex
+                    zIndex='1'
+                    flexDirection='column'
+                    justifyContent={{ base: 'center', sm: 'center' }}
+                    alignItems={{ base: 'flex-start', sm: 'center' }}
+                    p={{ base: "0px", sm: '5px' }}
+                    // mt={{ base: "10%", sm: '0px' }}
+                    maxW={{ '2xl': '75%', xl: '90%', lg: "90%", md: "90%", sm: "90%", base: "90%" }}
+                >
                     <MotionText
                         initial={{ y: -100, opacity: 0 }}
                         animate={{ x: 0, y: 0, opacity: 1 }}
                         transition={{ duration: 1 }}
                         fontFamily='"Major Mono Display", monospace'
                         as="h1"
-                        fontSize={{ '2xl': '1vw', xl: '1vw' }}
+                        fontSize={{ '2xl': '1vw', xl: '1vw', base: '15px' }}
                         color="#a6a6a6"
                     >
                         I'm
@@ -893,22 +901,22 @@ const Home = () => {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 2 }}
                         as="h2"
-                        textAlign='center'
-                        fontSize={{ '2xl': '5vw', xl: '5vw', lg: '5vw', md: '5vw', sm: '5vw', base: '6vw' }}
+                        textAlign={{ base: 'flex-start', sm: 'center' }}
+                        fontSize={{ '2xl': '5vw', xl: '5vw', lg: '5vw', md: '5vw', sm: '5vw', base: '45px' }}
                         lineHeight='1'
                         color="#ff4545BD"
                         mt={2}
                         fontWeight='900'
                     >
-                        &lt; Nikhil Kharche /&gt;
+                        <Text as='span'>&lt;</Text> Nikhil Kharche <Text as='span'>/&gt;</Text>
                     </MotionText>
                     <MotionText
                         initial={{ x: 50, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 2 }}
                         as="h2"
-                        textAlign='left'
-                        fontSize={{ '2xl': '2.5vw', xl: '2.5vw', lg: '2.5vw', md: '2.5vw', sm: '2.5vw', base: '4vw' }}
+                        // textAlign='left'
+                        fontSize={{ '2xl': '2.5vw', xl: '2.5vw', lg: '2.5vw', md: '2.5vw', sm: '2.5vw', base: '25px' }}
                         lineHeight='1'
                         color="#a6a6a6"
                         mb='20px'
@@ -920,12 +928,12 @@ const Home = () => {
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ x: 0, y: 0, opacity: 1 }}
                         transition={{ duration: 2.5 }}
-                        fontSize={{ base: '2.3vw', sm: '1.5vw', md: '1vw' }}
+                        fontSize={{ base: '18px', sm: '1.5vw', md: '1vw' }}
                         color="#a6a6a6"
                         letterSpacing='1px'
-                        textAlign='center'
+                        textAlign={{ base: 'flex-start', sm: 'center' }}
                     >
-                        Passionate frontend developer at Knight Motion Media, Pune, with 6 months of experience in <Text as='span' color='#ff4545' m='0px' fontSize={{ base: '2.3vw', sm: '1.5vw', md: '1vw' }} >React js, Bootstrap, Chakra Ui</Text>. Committed to crafting engaging user experiences.
+                        Passionate frontend developer at Marworx Technologies Pvt Ltd., Pune with <Text as='span' color='#ff4545' m='0px' fontSize={{ base: '18px', sm: '1.5vw', md: '1vw' }} > 1 Year </Text>of experience in <Text as='span' color='#ff4545' m='0px' fontSize={{ base: '18px', sm: '1.5vw', md: '1vw' }} >React js, Bootstrap, Chakra Ui</Text>. Committed to crafting engaging user experiences.
                     </MotionText>
                     <MotionButton
                         onClick={() => window.open(Resume)}
@@ -940,6 +948,7 @@ const Home = () => {
                         _hover={{ color: '#ebebeb', border: '2px solid #ff4545' }}
                         zIndex='11'
                         borderRadius='0px'
+                        w='max-content'
                         mt={4}
                     >
                         Resume
