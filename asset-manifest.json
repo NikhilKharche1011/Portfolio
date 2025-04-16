@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.321e3a02.css",
-    "main.js": "/Portfolio/static/js/main.79c4a437.js",
-    "static/js/815.5f809f3d.chunk.js": "/Portfolio/static/js/815.5f809f3d.chunk.js",
+    "main.js": "/Portfolio/static/js/main.b93a005f.js",
+    "static/js/815.4740b95a.chunk.js": "/Portfolio/static/js/815.4740b95a.chunk.js",
     "static/js/206.020cae30.chunk.js": "/Portfolio/static/js/206.020cae30.chunk.js",
-    "static/css/747.48c3b897.chunk.css": "/Portfolio/static/css/747.48c3b897.chunk.css",
-    "static/js/747.f8951c9d.chunk.js": "/Portfolio/static/js/747.f8951c9d.chunk.js",
+    "static/css/695.48c3b897.chunk.css": "/Portfolio/static/css/695.48c3b897.chunk.css",
+    "static/js/695.4f5b9e6f.chunk.js": "/Portfolio/static/js/695.4f5b9e6f.chunk.js",
     "static/css/720.48c3b897.chunk.css": "/Portfolio/static/css/720.48c3b897.chunk.css",
     "static/js/720.815907cd.chunk.js": "/Portfolio/static/js/720.815907cd.chunk.js",
     "static/css/318.48c3b897.chunk.css": "/Portfolio/static/css/318.48c3b897.chunk.css",
@@ -15,9 +15,9 @@
     "static/js/644.539b2e63.chunk.js": "/Portfolio/static/js/644.539b2e63.chunk.js",
     "static/js/476.7d6fe13b.chunk.js": "/Portfolio/static/js/476.7d6fe13b.chunk.js",
     "static/media/map_image.webp": "/Portfolio/static/media/map_image.a8bd54e729b757277ea9.webp",
+    "static/media/Nikhil_kharche_2025.pdf": "/Portfolio/static/media/Nikhil_kharche_2025.02af10aa8a8a0b2333e1.pdf",
     "static/media/videofide.svg": "/Portfolio/static/media/videofide.6b7f9d6727a0e3f95694e1cbbe64bf9c.svg",
     "static/media/uttaraimpex.svg": "/Portfolio/static/media/uttaraimpex.47b80161aa3938ac829b52b08a57a5bc.svg",
-    "static/media/Nikhil_resume_nov_2024.pdf": "/Portfolio/static/media/Nikhil_resume_nov_2024.23e6ed0d00d8c1c9c43c.pdf",
     "static/media/foxymatic.svg": "/Portfolio/static/media/foxymatic.9e8b2b84cdb20c7385166491db168b39.svg",
     "static/media/image.webp": "/Portfolio/static/media/image.baace39d3d632a16409a.webp",
     "static/media/bootstrap-5-logo-icon (1).png": "/Portfolio/static/media/bootstrap-5-logo-icon (1).8a5aea02455fb216965f.png",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.321e3a02.css",
-    "static/js/main.79c4a437.js"
+    "static/js/main.b93a005f.js"
   ]
 }
