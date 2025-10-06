@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.321e3a02.css",
-    "main.js": "/Portfolio/static/js/main.b93a005f.js",
-    "static/js/815.4740b95a.chunk.js": "/Portfolio/static/js/815.4740b95a.chunk.js",
+    "main.js": "/Portfolio/static/js/main.e2c8b2bb.js",
+    "static/js/815.95642064.chunk.js": "/Portfolio/static/js/815.95642064.chunk.js",
     "static/js/206.020cae30.chunk.js": "/Portfolio/static/js/206.020cae30.chunk.js",
-    "static/css/695.48c3b897.chunk.css": "/Portfolio/static/css/695.48c3b897.chunk.css",
-    "static/js/695.4f5b9e6f.chunk.js": "/Portfolio/static/js/695.4f5b9e6f.chunk.js",
+    "static/css/846.48c3b897.chunk.css": "/Portfolio/static/css/846.48c3b897.chunk.css",
+    "static/js/846.93d7d832.chunk.js": "/Portfolio/static/js/846.93d7d832.chunk.js",
     "static/css/720.48c3b897.chunk.css": "/Portfolio/static/css/720.48c3b897.chunk.css",
-    "static/js/720.815907cd.chunk.js": "/Portfolio/static/js/720.815907cd.chunk.js",
+    "static/js/720.42ccd93f.chunk.js": "/Portfolio/static/js/720.42ccd93f.chunk.js",
     "static/css/318.48c3b897.chunk.css": "/Portfolio/static/css/318.48c3b897.chunk.css",
     "static/js/318.621e563d.chunk.js": "/Portfolio/static/js/318.621e563d.chunk.js",
     "static/css/305.48c3b897.chunk.css": "/Portfolio/static/css/305.48c3b897.chunk.css",
     "static/js/305.7eebde78.chunk.js": "/Portfolio/static/js/305.7eebde78.chunk.js",
     "static/js/644.539b2e63.chunk.js": "/Portfolio/static/js/644.539b2e63.chunk.js",
     "static/js/476.7d6fe13b.chunk.js": "/Portfolio/static/js/476.7d6fe13b.chunk.js",
+    "static/media/NIKHIL-KHARCHE.pdf": "/Portfolio/static/media/NIKHIL-KHARCHE.55ee214ad3879b048418.pdf",
     "static/media/map_image.webp": "/Portfolio/static/media/map_image.a8bd54e729b757277ea9.webp",
-    "static/media/Nikhil_kharche_2025.pdf": "/Portfolio/static/media/Nikhil_kharche_2025.02af10aa8a8a0b2333e1.pdf",
     "static/media/videofide.svg": "/Portfolio/static/media/videofide.6b7f9d6727a0e3f95694e1cbbe64bf9c.svg",
     "static/media/uttaraimpex.svg": "/Portfolio/static/media/uttaraimpex.47b80161aa3938ac829b52b08a57a5bc.svg",
     "static/media/foxymatic.svg": "/Portfolio/static/media/foxymatic.9e8b2b84cdb20c7385166491db168b39.svg",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.321e3a02.css",
-    "static/js/main.b93a005f.js"
+    "static/js/main.e2c8b2bb.js"
   ]
 }
